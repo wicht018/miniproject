@@ -1,0 +1,455 @@
+body {
+	background-color: #7a7a7a;
+}
+
+@font-face {
+	font-family: title;
+	src:url(../fonts/tancred.ttf) format('truetype');	
+}
+
+@font-face {
+	font-family: subtitle;
+	src:url(../fonts/garamondprobold.otf) format('opentype');
+}
+
+@font-face {
+	font-family: bottomtext;
+	src:url(../fonts/garamondpro.otf) format('opentype');
+}
+
+#border {
+	width: 382px;
+	height: 600px;	
+	border: 1px solid black;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+	z-index: 2;	
+	overflow: hidden;
+}
+
+.coverbg {
+	width: 382px;
+	height: 600px;
+	background-color: black;
+	border: 0px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -2;	
+}
+
+.title1 {
+	font-family: title;
+	font-size: 24px;
+	color: white;	
+	-webkit-text-stroke: 1px white;
+	opacity: 0;
+	letter-spacing: 2px;
+	position: absolute;
+	left: 164px;
+	top: 32px;	
+	z-index: 1;
+
+	animation: hobbitfade 6s cubic-bezier(.11,.72,.15,.95);
+	animation-fill-mode: forwards;
+	animation-delay: 2.35s;	
+}
+
+.title2 {
+	font-family: title;
+	font-size: 78px;
+	color: white;	
+	-webkit-text-stroke: 2px white;
+	opacity: 0;
+	letter-spacing: 6px;	
+	position: absolute;
+	left: 44px;
+	top: 69px;	
+	z-index: 1;
+
+	animation: hobbitfade 6s cubic-bezier(.11,.72,.15,.95);
+	animation-fill-mode: forwards;
+	animation-delay: 2.35s;
+}
+
+@keyframes hobbitfade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.subtitle {
+	font-family: subtitle;
+	font-size: 16px;
+	color: white;	
+	opacity: 0;
+	letter-spacing: 0.5px;
+	position: absolute;
+	left: 56px;
+	top: 155px;	
+	z-index: 1;
+
+	animation: captionfade 7s;
+	animation-fill-mode: forwards;
+	animation-delay: 5s;	
+}
+
+@keyframes captionfade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.birdleft {
+	width: 382px;
+	height: 600px;
+	background: url("../images/birdleft.png");
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+	z-index: 1;	
+
+	animation: flyleft 5s;
+	animation-fill-mode: forwards;
+	animation-delay: 3s;
+}
+
+@keyframes flyleft {
+	0% {left: 60%; top: 35%; opacity: 0;}
+	100% {left: 50%; top: 50%; opacity: 1;}
+}
+
+.birdright {
+	width: 382px;
+	height: 600px;
+	background: url("../images/birdright.png");
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+	z-index: 1;	
+
+	animation: flyright 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;
+}
+
+@keyframes flyright {
+	0% {left: 55%; top: 60%; opacity: 0;}
+	100% {left: 50%; top: 50%; opacity: 1;}
+}
+
+.mountains {
+	width: 382px;
+	height: 600px;
+	background: url("../images/mountains.png");
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+	z-index: 1;	
+
+	animation: mtn_fade 3s;
+	animation-fill-mode: forwards;	
+}
+
+@keyframes mtn_fade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.sun {
+	width: 382px;
+	height: 600px;
+	background: url("../images/sun.png");
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+
+	animation: sunset 5s cubic-bezier(.09,.37,.61,.94);
+	animation-fill-mode: forwards;
+	animation-delay: 1s;	
+}
+
+@keyframes sunset {
+	0% {left: 15%; top: -15%; opacity: 1;}
+	100% {left: 50%; top: 50%; opacity: 1;}
+}
+
+.cloudsleft {
+	width: 470px;
+	height: 600px;
+	background: url("../images/cloudsleft.png");
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+	z-index: -1;
+
+	animation: cloudsleft 5s cubic-bezier(.25,.26,.38,.97);
+	animation-fill-mode: forwards;
+	animation-delay: 1s;		
+}
+
+@keyframes cloudsleft {
+	0% {opacity: 0; left: 25%;}
+	50% {opacity: .5;}
+	100% {opacity : 1; left: 50%;}
+}
+
+.cloudsright {
+	width: 470px;
+	height: 600px;
+	background: url("../images/cloudsright.png");
+	opacity: 0;
+	position: absolute;
+	left: 45%;
+	top: 50%;
+	transform: translate(-50%, -50%);	
+	z-index: -1;
+
+	animation: cloudsright 3.5s cubic-bezier(.25,.26,.38,.97);
+	animation-fill-mode: forwards;
+	animation-delay: 2s;	
+}
+
+@keyframes cloudsright {
+	0% {opacity: 0; left: 60%;}
+	50% {opacity: .75;}
+	100% {opacity : 1; left: 45%;}
+}
+
+.authorj {
+	font-family: bottomtext;
+	font-size: 42px;
+	color: white;	
+	opacity: 0;
+	position: absolute;
+	left: 27px;
+	top: 490px;	
+	z-index: 1;
+
+	animation: authorfade 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;	
+}
+
+.authorrr {
+	font-family: bottomtext;
+	font-size: 42px;
+	color: white;
+	opacity: 0;
+	letter-spacing: 16px;	
+	position: absolute;
+	left: 55px;
+	top: 490px;	
+	z-index: 1;
+
+	animation: authorfade 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;	
+}
+
+.authorlast {
+	font-family: bottomtext;
+	font-size: 42px;
+	color: white;
+	opacity: 0;	
+	letter-spacing: 4px;	
+	position: absolute;
+	left: 145px;
+	top: 490px;	
+	z-index: 1;
+
+	animation: authorfade 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;	
+}
+
+@keyframes authorfade {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.dot {
+	width: 5px;
+	height: 5px;
+	background-color: white;
+	opacity: 0;
+	border-radius: 100%;
+	position: absolute;
+	left: 46px;
+	top: 507px;	
+	z-index: 1;	
+
+	animation: authorfade 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;	
+}
+
+.dot2 {
+	width: 5px;
+	height: 5px;
+	background-color: white;
+	opacity: 0;
+	border-radius: 100%;
+	position: absolute;
+	left: 88px;
+	top: 507px;	
+	z-index: 1;	
+
+	animation: authorfade 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;	
+}
+
+.dot3 {
+	width: 5px;
+	height: 5px;
+	background-color: white;
+	opacity: 0;
+	border-radius: 100%;
+	position: absolute;
+	left: 130px;
+	top: 507px;	
+	z-index: 1;	
+
+	animation: authorfade 4s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.5s;	
+}
+
+.year {
+	font-family: bottomtext;
+	font-size: 32px;
+	color: #ff3e2e;		
+	opacity: 0;
+	position: absolute;
+	left: 38px;
+	top: 545px;	
+	z-index: 1;
+
+	animation: captionfade 7s;
+	animation-fill-mode: forwards;
+	animation-delay: 5s;	
+}
+
+.th {
+	font-family: bottomtext;
+	font-size: 12px;
+	color: #ff3e2e;		
+	opacity: 0;
+	position: absolute;
+	left: 72px;
+	top: 553px;	
+	z-index: 1;
+
+	animation: captionfade 7s;
+	animation-fill-mode: forwards;
+	animation-delay: 5s;	
+}
+
+.edition {
+	font-family: bottomtext;
+	font-size: 20px;
+	color: #ff3e2e;	
+	opacity: 0;
+	letter-spacing: 0.5px;	
+	position: absolute;
+	left: 100px;
+	top: 550px;	
+	z-index: 1;
+
+	animation: captionfade 7s;
+	animation-fill-mode: forwards;
+	animation-delay: 5s;	
+}
+
+.ring {
+	width: 382px;
+	height: 600px;
+	background: url("../images/ring.png");
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);		
+}
+
+.bottomteeth {
+	width: 382px;
+	height: 600px;
+	background: url("../images/bottomteeth.png");
+	opacity: 1;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	transform: translate(-50%, -50%);		
+}
+
+.topteeth {
+	width: 382px;
+	height: 600px;
+	background: url("../images/topteeth.png");
+	opacity: 1;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translate(-50%, -50%);		
+}
+
+.sun2 {
+	width: 382px;
+	height: 600px;
+	background: url("../images/sun.png");
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);		
+}
+
+.sun2:hover {
+	background:url("../images/ring.png");
+	opacity: 1;
+	transition: 1s;
+}
+
+.sun2:hover .bottomteeth{
+	transition: 1s;
+	top:50%;
+}
+
+.sun2:hover .topteeth{
+	transition: 1s;
+	top:50%;	
+}
+
+.sun2:hover .sun {
+	opacity: 0;
+	transition: 1s;
+}
+
+
+/*
+.reference {
+	width: 382px;
+	height: 600px;
+	opacity: .5;
+	background: url("../images/reference.png");
+	border: 0px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);		
+}
+
+
+
